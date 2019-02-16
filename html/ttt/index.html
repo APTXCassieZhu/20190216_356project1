@@ -3,15 +3,16 @@
 <link rel = "stylesheet" href="style.css">
 </head>
 <body>
-	<?php if (isset($_POST['form_submitted'])):?>
-	<h2> Hello <?php echo $_POST['name']; date_default_timezone_set('American/New_York'); 
-$date = date('Y/m/d'); echo " $date";?>
-	</h2>
+	<?php if (isset($_POST['name'])):?>
+	<h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); 
+$date = date('Y-m-d'); echo "Hello $name, $date";?>
+	</h1>
 	<?php else: ?> 
-	<form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post">
-	Name: <input type = "text" name = "name">
-	<input type = "hidden" name = "form_submitted" value = "1"/>
-	<input type= "submit" value = "Submit">
+	<form action = "/ttt/" method = "post">
+	<label for="name">Name:</label>
+	 <input type = "text" name = "name" id = "name">
+	<button type= "submit"> submit </button>
+	<!input type ="hidden" name="form_submitted" value ="1">
         </form>
 	<?php endif; ?>
 </body>
