@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script src=play.js></scirpt>
     </head>
     <body>
 
