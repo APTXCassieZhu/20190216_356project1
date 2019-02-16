@@ -1,0 +1,18 @@
+<html>
+<head>
+<link rel = "stylesheet" href="style.css">
+</head>
+<body>
+	<?php if (isset($_POST['form_submitted'])):?>
+	<h2> Hello <?php echo $_POST['name']; date_default_timezone_set('American/New_York'); 
+$date = date('Y/m/d'); echo " $date";?>
+	</h2>
+	<?php else: ?> 
+	<form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post">
+	Name: <input type = "text" name = "name">
+	<input type = "hidden" name = "form_submitted" value = "1"/>
+	<input type= "submit" value = "Submit">
+        </form>
+	<?php endif; ?>
+</body>
+</html>
