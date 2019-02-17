@@ -16,7 +16,7 @@ $(document).ready(function(){
   function sendJson() {
 
     var posting = $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
-        $("#a").text(data.name);
+        $("#a").text(data.winner);
       }, "json" );
    
 }
