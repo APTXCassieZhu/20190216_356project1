@@ -15,4 +15,8 @@ td {
   border: 6px solid #222;
   height: 200px;
   width: 200px;
+  font-size: 125pt;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
 }
