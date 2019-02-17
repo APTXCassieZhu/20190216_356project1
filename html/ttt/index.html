@@ -1,30 +1,33 @@
 <html>
 	<head>
 		<link rel = "stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="play.js"></script>
 	</head>
 	<body>
-		<script src="play.js"></script>
+		
         <?php if (isset($_POST['name'])):?>
         <h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); 
         $date = date('Y-m-d'); echo "Hello $name, $date";?>
-        </h1>
+		</h1>
+		<h1 id="a">aaa</h1>
         <table id="tictactoe">
 		<tr>
-			<td id="0" onClick="JavaScript: clickCell(0);"></td>
-			<td id="1" onClick="JavaScript: clickCell(1);"></td>
-			<td id="2" onClick="JavaScript: clickCell(2);"></td>
+			<td class="cell" id="0" ></td>
+			<td class="cell" id="1" ></td>
+			<td class="cell" id="2" ></td>
 		</tr>
 		<tr>
-			<td id="3" onClick="JavaScript: clickCell(3);"></td>
-			<td id="4" onClick="JavaScript: clickCell(4);"></td>
-			<td id="5" onClick="JavaScript: clickCell(5);"></td>
+			<td class="cell" id="3" ></td>
+			<td class="cell" id="4" ></td>
+			<td class="cell" id="5" ></td>
 		</tr>
 		<tr>
-			<td id="6" onClick="JavaScript: clickCell(6);"></td>
-			<td id="7" onClick="JavaScript: clickCell(7);"></td>
-			<td id="8" onClick="JavaScript: clickCell(8);"></td>
+			<td class="cell" id="6" ></td>
+			<td class="cell" id="7" ></td>
+			<td class="cell" id="8" ></td>
 		</tr>
-        </table>
+		</table>
         <?php else: ?>
         <form action = "/ttt/" method = "post">
         <label for="name">Name:</label>

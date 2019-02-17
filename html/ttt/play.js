@@ -1,11 +1,19 @@
 var grid = new Array(9);
 var gameover = false;
 
-for(var i=0; i<=8; i++){
-    grid = ' ';
-}
+$(document).ready(function(){
+    $(".cell").click(function(){
+      $(this).text("X");
+      grid[$(this).attr("id")]="X";
+      sendJson();
+    });
+  });
 
-function clickCell(x){
-    document.getElementById(x).innerHTML = "X";
-}
 
+
+
+
+  function sendJson() {
+
+    var posting = $.post( "/ttt/play.php", { "grid": grid } );
+}
