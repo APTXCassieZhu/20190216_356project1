@@ -37,9 +37,7 @@
 
     function Move($grid) {
         global $grid;
-        print "lala";
         if($grid['4'] == " "){
-            print "OOOOOOOO";
             $grid['4'] == "O";
             return "";
         }else if ($grid['4'] == "X" && $grid['0']== " "){
