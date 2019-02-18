@@ -5,14 +5,13 @@ var grid = {0:" ", 1:" ", 2:" ",
 var winner = "";
 
 $(document).ready(function(){
-  if (winner = ""){
     $(".cell").click(function(){
+      if (winner = ""){
       $(this).text("X");
       grid[$(this).attr("id")]="X";
       sendJson();
-      console.log("111");
+      }
     });
-  }
   });
 
   function sendJson() {
@@ -25,9 +24,6 @@ $(document).ready(function(){
         for(var i=0; i<9;i++){
             $('#' + i).text(data.grid[i]);
            }
-   
-        console.log(data.grid);
-        console.log("lalal");
       }, "json" );
    
 }
