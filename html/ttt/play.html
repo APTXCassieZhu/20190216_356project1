@@ -1,6 +1,7 @@
 <?php
     $json = file_get_contents('php://input');
     $grid = json_decode($json,true);
+    $grid = $grid['grid'];
     //$grid = $_POST["grid"];
     $winner = "";
 

@@ -10,7 +10,7 @@
         <h1> <?php $name = $_POST['name']; date_default_timezone_set('American/New_York'); 
         $date = date('Y-m-d'); echo "Hello $name, $date";?>
 		</h1>
-		<h1 id="a">aaa</h1>
+		<h1 id="winner"></h1>
         <table id="tictactoe">
 		<tr>
 			<td class="cell" id="0" ></td>

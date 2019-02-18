@@ -22,7 +22,7 @@ $(document).ready(function(){
       dataType:"json",
       success: function(data){
         console.log(data);
-        $("#a").text(data.winner);
+        $("#winner").text(data.winner);
         grid = data.grid;
         winner = data.winner;
         for(var i=0; i<9;i++){
