@@ -17,7 +17,7 @@ $(document).ready(function(){
     $.ajax({
       url:"/ttt/play",
       type:"POST",
-      data:{ "grid": grid },
+      data:JSON.stringify({grid:grid}),
       contentType:"application/json; charset=utf-8",
       dataType:"json",
       success: function(data){
