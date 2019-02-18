@@ -51,36 +51,36 @@
                 //X 
                 //X
                 if($grid[strval($x+0)] == " " && $grid[strval($x+3)] == "X" &&$grid[strval($x+6)] == "X"){
-                    $grid[strval($x+0)] = "O";
+                    $grid[$x+0] = "O";
                     return " ";
                 }
                 //X 
                 //[] 
                 //X
                 if($grid[strval($x+0)] == "X" && $grid[strval($x+3)] == " " &&$grid[strval($x+6)] == "X"){
-                    $grid[strval($x+3)] = "O";
+                    $grid[$x+3] = "O";
                     return " ";
                 }
                 //X 
                 //X 
                 //[]
                 if($grid[strval($x+0)] == "X" && $grid[strval($x+3)] == "X" &&$grid[strval($x+6)] == " "){
-                    $grid[strval($x+6)] = "O";
+                    $grid[$x+6] = "O";
                     return " ";
                 }
                 //[] X X
                 if($grid[strval($x*3+0)] == " " && $grid[strval($x*3+1)] == "X" &&$grid[strval($x*3+2)] == "X"){
-                    $grid[strval($x*3+0)] = "O";
+                    $grid[$x*3+0] = "O";
                     return " ";
                 }
                 //X [] X
                 if($grid[strval($x*3+0)] == "X" && $grid[strval($x*3+1)] == " " &&$grid[strval($x*3+2)] == "X"){
-                    $grid[strval($x*3+1)] = "O";
+                    $grid[$x*3+1] = "O";
                     return " ";
                 }
                 //X X []
                 if($grid[strval($x*3+0)] == "X" && $grid[strval($x*3+1)] == "X" &&$grid[strval($x*3+2)] == " "){
-                    $grid[strval($x*3+2)] = "O";
+                    $grid[$x*3+2] = "O";
                     return " ";
                 }
             }
@@ -129,7 +129,7 @@
         }
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
-                $grid[strval($x)] = "O";
+                $grid[$x] = "O";
                 return " ";
             }
         }
