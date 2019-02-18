@@ -35,7 +35,7 @@
 
     
 
-    function Move($grid) {
+    function Move() {
         global $grid;
         if($grid['4'] == " "){
             print "11 ";
@@ -139,7 +139,7 @@
     //header('Access-Control-Allow-Origin:*');//注意！跨域要加这个头 上面那个没有
     $winner = check();
     if($winner == ""){
-        Move($grid);
+        Move();
     }
     $myjson -> grid = $grid;
     $myjson -> winner = $winner;
