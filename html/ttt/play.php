@@ -38,11 +38,9 @@
     function Move() {
         global $grid;
         if($grid['4'] == " "){
-            print "11 ";
             $grid[4] = "O";
             return " ";
         }else if ($grid['4'] == "X" && $grid['0'] == " "){
-            print "22 ";
             $grid[0] = "O";
             return " ";
         }else{
@@ -127,10 +125,8 @@
                 return " ";
             }
         }
-        print "3333";
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
-                print "444";
                 $grid[$x] = "O";
                 return " ";
             }
