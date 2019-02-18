@@ -1,5 +1,6 @@
 <?php
     header('Access-Control-Allow-Origin:*');//注意！跨域要加这个头 上面那个没有
+    header('Content-Type: application/json; charset=utf-8');
     $json = file_get_contents('php://input');
     $grid = json_decode($json,true);
     $grid = $grid['grid'];
