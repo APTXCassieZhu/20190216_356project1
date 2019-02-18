@@ -20,6 +20,10 @@ $(document).ready(function(){
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
+        for(var i=0; i<9;i++){
+            $('#' + i).text(data.grid[i]);
+           }
+   
         console.log(data.grid);
         console.log("lalal");
       }, "json" );

@@ -139,6 +139,7 @@
     if($winner == ""){
         Move();
     }
+    $winner = check();
     $myjson -> grid = $grid;
     $myjson -> winner = $winner;
     echo json_encode($myjson);
