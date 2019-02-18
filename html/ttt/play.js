@@ -14,13 +14,15 @@ $(document).ready(function(){
   });
 
   function sendJson() {
-    var posting = $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
-        console.log("lalal");
+    $.ajaxSettings.async = false;
+        $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
+        console.log("data");
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
         console.log(data.grid);
         console.log("lalal");
       }, "json" );
+      $.ajaxSettings.async = true;
    
 }
