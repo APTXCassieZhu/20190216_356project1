@@ -129,7 +129,7 @@
         }
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
-                $grid[$x] = "O";
+                $grid[strval($x)] = "O";
                 return " ";
             }
         }
