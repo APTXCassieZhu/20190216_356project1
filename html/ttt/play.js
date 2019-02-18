@@ -18,6 +18,7 @@ $(document).ready(function(){
         grid = data.grid;
         winner = data.winner;
         console.log(data.grid);
+        console.log("lalal")
       }, "json" );
    
 }
