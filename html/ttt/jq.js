@@ -16,7 +16,7 @@ $(document).ready(function(){
 
   function sendJson() {
         
-        $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
+        $.post( "/ttt/play", { "grid": grid }, function( data ) {
         console.log(data);
         $("#a").text(data.winner);
         grid = data.grid;
