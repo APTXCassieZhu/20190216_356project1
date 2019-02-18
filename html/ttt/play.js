@@ -9,16 +9,18 @@ $(document).ready(function(){
       $(this).text("X");
       grid[$(this).attr("id")]="X";
       sendJson();
+      console.log("111");
     });
   });
 
   function sendJson() {
     var posting = $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
+        console.log("lalal");
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
         console.log(data.grid);
-        console.log("lalal")
+        console.log("lalal");
       }, "json" );
    
 }
