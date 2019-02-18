@@ -127,8 +127,10 @@
                 return " ";
             }
         }
+        print "3333";
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
+                print "4444";
                 $grid[$x] = "O";
                 return " ";
             }
