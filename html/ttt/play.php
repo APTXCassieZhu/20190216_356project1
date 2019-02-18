@@ -35,7 +35,7 @@
 
     
 
-    function Move($grid) {
+    function Move() {
         global $grid;
         if($grid['4'] == " "){
             $grid['4'] == "O";
