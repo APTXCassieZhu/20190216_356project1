@@ -14,15 +14,21 @@ $(document).ready(function(){
   });
 
   function sendJson() {
-        
-        $.post( "/ttt/play", { "grid": grid }, function( data ) {
-        console.log(data);
+    $.ajax({
+      url:"/ttt/play",
+      type:"POST",
+      data:{ "grid": grid },
+      contentType:"application/json; charset=utf-8",
+      dataType:"json",
+      success: function(data){
+        onsole.log(data);
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
         for(var i=0; i<9;i++){
             $('#' + i).text(data.grid[i]);
            }
-      }, "json" );
+      }
+    })
    
 }
