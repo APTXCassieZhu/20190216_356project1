@@ -38,10 +38,10 @@
     function Move($grid) {
         global $grid;
         if($grid['4'] == " "){
-            $grid['4'] == "O";
+            $grid[4] == "O";
             return $gridl;
         }else if ($grid['4'] == "X" && $grid['0']== " "){
-            $grid['0'] == "O";
+            $grid[0] == "O";
             return $gridl;
         }else{
             for($x = 0; $x < 3; $x++){
@@ -127,7 +127,7 @@
         }
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
-                grid[strval($x)] == "O";
+                grid[$x] == "O";
                 return $gridl;
             }
         }
