@@ -6,7 +6,7 @@ var winner = "";
 
 $(document).ready(function(){
     $(".cell").click(function(){
-      if (winner = ""){
+      if (winner == ""){
       $(this).text("X");
       grid[$(this).attr("id")]="X";
       sendJson();
