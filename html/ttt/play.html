@@ -1,4 +1,5 @@
 <?php
+    header('Access-Control-Allow-Origin:*');//注意！跨域要加这个头 上面那个没有
     $json = file_get_contents('php://input');
     $grid = json_decode($json,true);
     $grid = $grid['grid'];
@@ -137,7 +138,7 @@
     }
 
 
-    //header('Access-Control-Allow-Origin:*');//注意！跨域要加这个头 上面那个没有
+    
     $winner = check();
     if($winner == ""){
         Move();
