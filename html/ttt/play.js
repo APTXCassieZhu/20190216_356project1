@@ -5,12 +5,14 @@ var grid = {0:" ", 1:" ", 2:" ",
 var winner = "";
 
 $(document).ready(function(){
+  if (winner = ""){
     $(".cell").click(function(){
       $(this).text("X");
       grid[$(this).attr("id")]="X";
       sendJson();
       console.log("111");
     });
+  }
   });
 
   function sendJson() {
