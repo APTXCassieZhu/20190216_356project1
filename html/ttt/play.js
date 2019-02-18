@@ -12,18 +12,12 @@ $(document).ready(function(){
     });
   });
 
-
-
-
-
   function sendJson() {
-
     var posting = $.post( "/ttt/play.php", { "grid": grid }, function( data ) {
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
-        console.log(grid);
-        console.log(winner);
+        console.log(data.grid);
       }, "json" );
    
 }
