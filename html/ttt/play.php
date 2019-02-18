@@ -39,11 +39,11 @@
         global $grid;
         if($grid['4'] == " "){
             print "11 ";
-            $grid[4] == "O";
+            $grid[4] = "O";
             return " ";
         }else if ($grid['4'] == "X" && $grid['0'] == " "){
             print "22 ";
-            $grid[0] == "O";
+            $grid[0] = "O";
             return " ";
         }else{
             for($x = 0; $x < 3; $x++){
@@ -129,7 +129,7 @@
         }
         for($x=0;$x<9;$x++){
             if($grid[strval($x)] == " "){
-                grid[$x] == "O";
+                $grid[$x] = "O";
                 return " ";
             }
         }
