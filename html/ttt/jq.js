@@ -21,7 +21,7 @@ $(document).ready(function(){
       contentType:"application/json; charset=utf-8",
       dataType:"json",
       success: function(data){
-        onsole.log(data);
+        console.log(data);
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
