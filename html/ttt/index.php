@@ -2,7 +2,7 @@
 	<head>
 		<link rel = "stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="play.js"></script>
+		<script src="jq.js"></script>
 	</head>
 	<body>
 		
