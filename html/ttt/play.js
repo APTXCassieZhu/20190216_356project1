@@ -22,6 +22,8 @@ $(document).ready(function(){
         $("#a").text(data.winner);
         grid = data.grid;
         winner = data.winner;
+        console.log(grid);
+        console.log(winner);
       }, "json" );
    
 }
